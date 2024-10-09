@@ -65,8 +65,8 @@ function predecir(event) {
     event.preventDefault()
     let nota1= parseFloat(data1.value)//parseInt o parseFloat o number
     let nota2= parseFloat(data2.value)
-    let operacion = nota1+nota2
-    let faltante= parseFloat(3.5 - operacion)
+    
+    let faltante= parseFloat(((3.5 - (nota1 * 0.3) - (nota2 * 0.3)) / 0.4).toFixed(2))
     console.log("El valor faltante para llegar al 100% es: " + faltante); 
 }
 
