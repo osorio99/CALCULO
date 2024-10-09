@@ -53,8 +53,20 @@ function calculateNote(event) {
     response.textContent=`Señor@ ${username.value} su nota definitiva es: ${result}` 
     //guarda variables que no son tipo int
 
- 
+    
 
 }
 
+
+const btnPredecir = document.getElementById("btn-predecir")
+btnPredecir.addEventListener("click",predecir)
+
+function predecir(event) {
+    event.preventDefault()
+    let nota1= parseFloat(data1.value)//parseInt o parseFloat o number
+    let nota2= parseFloat(data2.value)
+    let operacion = nota1+nota2
+    let faltante= parseFloat(3.5 - operacion)
+    console.log("El valor faltante para llegar al 100% es: " + faltante); 
+}
 
